@@ -9,6 +9,8 @@
 <body>
     <a href="pagina2.html">Ir a pagina 2</a>
     <p id="uno">info uno</p>
+
+    <button onclick="remover()">borrar localStorage</button>
     
 
     <script>
@@ -18,9 +20,14 @@
     localStorage.setItem('nombres', nombre);    // Guarda la informacion
 
     var info = localStorage.getItem('nombres'); // Toma la informacion y le da el valor a la variable
-    document.write(info)                        // Muestra la informacion en el documento
-        uno.innerHTML = info;
     
+        uno.innerHTML = info; // Muestra la informacion en el documento
+    
+
+    function remover() {
+        localStorage.removeItem("nombres"); // elimina el valor del localStorage
+        uno.innerHTML = localStorage.getItem('nombres');
+    }
     </script>
     
 </body>
