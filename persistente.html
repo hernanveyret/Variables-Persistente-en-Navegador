@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Percistente</title>
+</head>
+<body>
+    <a href="pagina2.html">Ir a pagina 2</a>
+    <p id="uno">info uno</p>
+    
+
+    <script>
+    var nombre = [];
+    var ingresar = prompt("nombre");
+    nombre.push([ingresar]);
+    localStorage.setItem('nombres', nombre);    // Guarda la informacion
+
+    var info = localStorage.getItem('nombres'); // Toma la informacion y le da el valor a la variable
+    document.write(info)                        // Muestra la informacion en el documento
+        uno.innerHTML = info;
+    
+    </script>
+    
+</body>
+</html>
